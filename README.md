@@ -1,25 +1,25 @@
-#webcam_opencv interfacing 
+# webcam_opencv interfacing 
 
 How to Install a USB Camera in diffential robot 
 
-#Installing ROS OpenCV camera driver
+# Installing ROS OpenCV camera driver
 
 
 sudo apt update 
 
 sudo apt install ros-noetic-cv-camera
 
-#Once you have this installed in your raspberry pi, you can plug it in a USB port and test it running this node:
+# Once you have this installed in your raspberry pi, you can plug it in a USB port and test it running this node:
 
 source /opt/ros/noetic/setup.bash
 
 rosrun cv_camera cv_camera_node
 
-#it wil publish image_raw and some more topics 
+# it wil publish image_raw and some more topics 
 
 Type rostopic list in terminal
 
-#If it works, then create a launch file for the node and also a static transform publisher from base_link to camera_link
+# If it works, then create a launch file for the node and also a static transform publisher from base_link to camera_link
 
 
 
@@ -28,5 +28,5 @@ Type rostopic list in terminal
   <node pkg="tf" type="static_transform_publisher" name="camera_frames_pub" args="0.05 0.0 0.1 0 0 0 /base_link /camera 35"/>
 </launch>
 
-#Youtube video
+# Youtube video
 https://youtu.be/A3CTi3QnZZ0
